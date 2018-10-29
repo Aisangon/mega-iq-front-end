@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CustomMaterialModule } from './core/material.module';
+import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
@@ -15,7 +17,9 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        routing
+        routing,
+        FormsModule,
+        CustomMaterialModule
     ],
     declarations: [
         AppComponent,
@@ -23,6 +27,7 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
         LoginComponent,
         RegisterComponent
     ],
+    providers: [],
     bootstrap: [AppComponent]
 })
 
